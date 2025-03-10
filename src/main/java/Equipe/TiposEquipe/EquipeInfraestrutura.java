@@ -1,7 +1,6 @@
 package Equipe.TiposEquipe;
 
 import Equipe.Equipe;
-import Incidente.Incidente;
 import Incidente.TiposIncidente.TipoIncidenteInfraestrutura;
 
 public class EquipeInfraestrutura extends Equipe {
@@ -16,15 +15,7 @@ public class EquipeInfraestrutura extends Equipe {
         return instancia;
     }
 
-    public String getSetor() {
-        return "Infraestrutura";
+    public String getSetorResolucao() {
+        return "Incidente resolvido pela equipe de infraestrutura.";
     }
-
-    @Override
-    public String receberIncidente(Incidente incidente) {
-        // IMPLEMENTAR TRATAMENTO COM STRATEGY E TEMPLATE METHOD
-        // resolverIncidente();
-        return "O incidente está sendo tratado pela equipe de infraestrutura.";
-    }
-
 }

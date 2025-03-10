@@ -28,7 +28,7 @@ public abstract class Equipe {
         this.equipeSuperior = equipeSuperior;
     }
 
-    public abstract String getSetor();
+    public abstract String getSetorResolucao();
 
     public String receberIncidente(Incidente incidente) {
         return "Incidente recebido pela equipe.";
@@ -36,7 +36,7 @@ public abstract class Equipe {
 
     public String resolverIncidente(Incidente incidente) {
         if (listaIncidentes.contains(incidente.getTipoIncidente())) {
-            return getSetor();
+            return getSetorResolucao();
         } else {
             if (equipeSuperior != null) {
                 return equipeSuperior.resolverIncidente(incidente);

@@ -16,14 +16,7 @@ public class EquipeSeguranca extends Equipe {
         return instancia;
     }
 
-    public String getSetor() {
-        return "Segurança";
-    }
-
-    @Override
-    public String receberIncidente(Incidente incidente) {
-        // IMPLEMENTAR TRATAMENTO COM STRATEGY E TEMPLATE METHOD
-        // resolverIncidente();
-        return "O incidente está sendo tratado pela equipe de segurança.";
+    public String getSetorResolucao() {
+        return "Incidente resolvido pela equipe de segurança.";
     }
 }
