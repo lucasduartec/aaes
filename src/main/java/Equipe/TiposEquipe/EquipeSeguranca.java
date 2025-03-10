@@ -1,6 +1,7 @@
 package Equipe.TiposEquipe;
 
 import Equipe.Equipe;
+import Incidente.Incidente;
 import Incidente.TiposIncidente.TipoIncidenteSeguranca;
 
 public class EquipeSeguranca extends Equipe {
@@ -8,7 +9,7 @@ public class EquipeSeguranca extends Equipe {
     private static EquipeSeguranca instancia = new EquipeSeguranca();
 
     private EquipeSeguranca() {
-        listaIncidentes.add(TipoIncidenteSeguranca.getTipoIncidenteSeguranca());
+        listaIncidentes.add(TipoIncidenteSeguranca.getInstancia());
     }
 
     public static EquipeSeguranca getInstancia() {
@@ -20,8 +21,9 @@ public class EquipeSeguranca extends Equipe {
     }
 
     @Override
-    public String receberIncidente(String mensagem) {
+    public String receberIncidente(Incidente incidente) {
         // IMPLEMENTAR TRATAMENTO COM STRATEGY E TEMPLATE METHOD
+        // resolverIncidente();
         return "O incidente está sendo tratado pela equipe de segurança.";
     }
 }

@@ -30,7 +30,7 @@ public abstract class Equipe {
 
     public abstract String getSetor();
 
-    public String receberIncidente(String mensagem) {
+    public String receberIncidente(Incidente incidente) {
         return "Incidente recebido pela equipe.";
     }
 

@@ -7,12 +7,15 @@ import Incidente.VisitorIncidente.IncidenteVisitor;
 
 public class Incidente {
     private String codigo;
+    private String descricao;
     private TipoIncidente tipoIncidente;
     private IncidenteEstado estado;
 
-    public Incidente(TipoIncidente tipoIncidente) {
+    public Incidente(TipoIncidente tipoIncidente, String descricao, String codigo) {
         this.estado = IncidenteEstadoReportado.getInstance();
         this.tipoIncidente = tipoIncidente;
+        this.descricao = descricao;
+        this.codigo = codigo;
     }
 
     public TipoIncidente getTipoIncidente() {
@@ -29,6 +32,10 @@ public class Incidente {
 
     public String getCodigo() {
         return this.codigo;
+    }
+
+    public String getDescricao() {
+        return this.descricao;
     }
 
     public void setEstado(IncidenteEstado estado) {

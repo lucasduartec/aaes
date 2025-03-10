@@ -1,12 +1,12 @@
 package Incidente.TiposIncidente;
 
 public class TipoIncidenteProduto implements TipoIncidente {
-    private static TipoIncidenteProduto tipoIncidenteProduto = new TipoIncidenteProduto();
+    private static TipoIncidenteProduto instancia = new TipoIncidenteProduto();
 
     private TipoIncidenteProduto() {
     };
 
-    public static TipoIncidenteProduto getTipoIncidenteProduto() {
-        return tipoIncidenteProduto;
+    public static TipoIncidenteProduto getInstancia() {
+        return instancia;
     }
 }
