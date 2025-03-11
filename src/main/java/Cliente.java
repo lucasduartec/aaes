@@ -8,7 +8,7 @@ public class Cliente implements Observer {
     private String nome;
     private String ultimaNotificacao;
 
-    public Cliente (String nome){
+    public Cliente(String nome) {
         this.nome = nome;
     }
 

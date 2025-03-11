@@ -1,5 +1,7 @@
 package Incidente;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Observable;
 
 import Incidente.EstadosIncidente.IncidenteEstado;
@@ -12,6 +14,7 @@ public class Incidente extends Observable {
     private String descricao;
     private TipoIncidente tipoIncidente;
     private IncidenteEstado estado;
+    private List<IncidenteEstado> memento = new ArrayList<IncidenteEstado>();
 
     public Incidente(TipoIncidente tipoIncidente, String descricao, String codigo) {
         this.estado = IncidenteEstadoReportado.getInstancia();
@@ -46,6 +49,18 @@ public class Incidente extends Observable {
 
     public void setEstado(IncidenteEstado estado) {
         this.estado = estado;
+        this.memento.add(this.estado);
+    }
+
+    public void restauraEstado(int indice) {
+        if (indice < 0 || indice > this.memento.size() - 1) {
+            throw new IllegalArgumentException("Índice inválido");
+        }
+        this.estado = this.memento.get(indice);
+    }
+
+    public List<IncidenteEstado> getEstados() {
+        return this.memento;
     }
 
     public boolean reportar() {
