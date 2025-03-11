@@ -1,11 +1,13 @@
 package Incidente;
 
+import java.util.Observable;
+
 import Incidente.EstadosIncidente.IncidenteEstado;
 import Incidente.EstadosIncidente.IncidenteEstadoReportado;
 import Incidente.TiposIncidente.TipoIncidente;
 import Incidente.VisitorIncidente.IncidenteVisitor;
 
-public class Incidente {
+public class Incidente extends Observable {
     private String codigo;
     private String descricao;
     private TipoIncidente tipoIncidente;
@@ -47,14 +49,20 @@ public class Incidente {
     }
 
     public boolean reportar() {
+        setChanged();
+        notifyObservers();
         return estado.reportar(this);
     }
 
     public boolean inciarAnalise() {
+        setChanged();
+        notifyObservers();
         return estado.iniciarAnalise(this);
     }
 
     public boolean resolver() {
+        setChanged();
+        notifyObservers();
         return estado.resolver(this);
     }
 }
