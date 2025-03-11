@@ -17,7 +17,7 @@ public class EquipeSeguranca extends Equipe {
         return instancia;
     }
 
-    public String resolverIncidente() {
-        return "Incidente resolvido pela equipe de segurança.";
+    public String iniciarResolucaoIncidente() {
+        return "O incidente será tratado pela equipe de segurança.";
     }
 }

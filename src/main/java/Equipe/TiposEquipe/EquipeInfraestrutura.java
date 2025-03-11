@@ -17,7 +17,7 @@ public class EquipeInfraestrutura extends Equipe {
         return instancia;
     }
 
-    public String resolverIncidente() {
-        return "Incidente resolvido pela equipe de infraestrutura.";
+    public String iniciarResolucaoIncidente() {
+        return "O incidente será tratado pela equipe de infraestrutura.";
     }
 }

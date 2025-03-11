@@ -18,8 +18,8 @@ public class EquipeDesenvolvimento extends Equipe {
         return instancia;
     }
 
-    public String resolverIncidente() {
-        return "Incidente resolvido pela equipe de desenvolvimento.";
+    public String iniciarResolucaoIncidente() {
+        return "O incidente será tratado pela equipe de desenvolvimento.";
     }
 
     @Override
