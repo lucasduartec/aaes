@@ -12,7 +12,7 @@ public class Incidente {
     private IncidenteEstado estado;
 
     public Incidente(TipoIncidente tipoIncidente, String descricao, String codigo) {
-        this.estado = IncidenteEstadoReportado.getInstance();
+        this.estado = IncidenteEstadoReportado.getInstancia();
         this.tipoIncidente = tipoIncidente;
         this.descricao = descricao;
         this.codigo = codigo;
@@ -38,12 +38,12 @@ public class Incidente {
         return this.descricao;
     }
 
-    public void setEstado(IncidenteEstado estado) {
-        this.estado = estado;
-    }
-
     public IncidenteEstado getEstado() {
         return estado;
+    }
+
+    public void setEstado(IncidenteEstado estado) {
+        this.estado = estado;
     }
 
     public boolean reportar() {

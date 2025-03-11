@@ -8,10 +8,10 @@ public class IncidenteEstadoReportado
     private IncidenteEstadoReportado() {
     };
 
-    private static IncidenteEstadoReportado instance = new IncidenteEstadoReportado();
+    private static IncidenteEstadoReportado instancia = new IncidenteEstadoReportado();
 
-    public static IncidenteEstadoReportado getInstance() {
-        return instance;
+    public static IncidenteEstadoReportado getInstancia() {
+        return instancia;
     }
 
     public String getEstado() {
@@ -20,7 +20,7 @@ public class IncidenteEstadoReportado
 
     @Override
     public boolean iniciarAnalise(Incidente incidente) {
-        incidente.setEstado(IncidenteEstadoEmAnalise.getInstance());
+        incidente.setEstado(IncidenteEstadoEmAnalise.getInstancia());
         return true;
     }
 }

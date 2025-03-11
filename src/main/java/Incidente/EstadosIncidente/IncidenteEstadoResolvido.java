@@ -6,10 +6,10 @@ public class IncidenteEstadoResolvido
     private IncidenteEstadoResolvido() {
     };
 
-    private static IncidenteEstadoResolvido instance = new IncidenteEstadoResolvido();
+    private static IncidenteEstadoResolvido instancia = new IncidenteEstadoResolvido();
 
-    public static IncidenteEstadoResolvido getInstance() {
-        return instance;
+    public static IncidenteEstadoResolvido getInstancia() {
+        return instancia;
     }
 
     public String getEstado() {
