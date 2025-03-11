@@ -10,6 +10,7 @@ public class EquipeInfraestrutura extends Equipe {
 
     private EquipeInfraestrutura() {
         listaIncidentes.add(TipoIncidenteInfraestrutura.getInstancia());
+        setEquipeSuperior(EquipeSeguranca.getInstancia());
         this.setEstrategiaResolucao(new ResolucaoInfraestrutura());
     }
 

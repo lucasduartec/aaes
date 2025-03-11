@@ -11,6 +11,7 @@ public class EquipeDesenvolvimento extends Equipe {
 
     private EquipeDesenvolvimento() {
         listaIncidentes.add(TipoIncidenteProduto.getInstancia());
+        setEquipeSuperior(EquipeInfraestrutura.getInstancia());
         this.setEstrategiaResolucao(new ResolucaoProduto());
     }
 
@@ -18,12 +19,13 @@ public class EquipeDesenvolvimento extends Equipe {
         return instancia;
     }
 
-    public String iniciarResolucaoIncidente() {
-        return "O incidente será tratado pela equipe de desenvolvimento.";
-    }
-
     @Override
     public String receberIncidente(Incidente incidente) {
         return analisarIncidente(incidente);
     }
+
+    public String iniciarResolucaoIncidente() {
+        return "O incidente será tratado pela equipe de desenvolvimento.";
+    }
+
 }

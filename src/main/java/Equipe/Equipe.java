@@ -11,9 +11,6 @@ public abstract class Equipe {
     protected ArrayList<TipoIncidente> listaIncidentes = new ArrayList<TipoIncidente>();
     protected EstrategiaResolucao estrategiaResolucao;
 
-    public Equipe() {
-    }
-
     public Equipe getEquipeSuperior() {
         return equipeSuperior;
     }
