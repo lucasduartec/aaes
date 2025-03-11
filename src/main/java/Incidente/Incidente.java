@@ -5,7 +5,7 @@ import java.util.Observable;
 import Incidente.EstadosIncidente.IncidenteEstado;
 import Incidente.EstadosIncidente.IncidenteEstadoReportado;
 import Incidente.TiposIncidente.TipoIncidente;
-import Incidente.VisitorIncidente.IncidenteVisitor;
+import Incidente.VisitorIncidente.Visitor;
 
 public class Incidente extends Observable {
     private String codigo;
@@ -28,7 +28,7 @@ public class Incidente extends Observable {
         this.tipoIncidente = tipoIncidente;
     }
 
-    public String aceitar(IncidenteVisitor visitor) {
+    public String aceitar(Visitor visitor) {
         return visitor.exibirIncidente(this);
     }
 

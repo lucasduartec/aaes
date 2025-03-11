@@ -2,7 +2,18 @@ package Incidente.VisitorIncidente;
 
 import Incidente.Incidente;
 
-public interface IncidenteVisitor {
-    String exibirIncidente(Incidente incidente);
+public class IncidenteVisitor implements Visitor {
+
+    String exibir(Incidente incidente) {
+        return incidente.aceitar(this);
+    }
+
+    @Override
+    public String exibirIncidente(Incidente incidente) {
+        return "{Incidente: {"
+                + "codigo: '" + incidente.getCodigo() + "'"
+                + ", estado: '" + incidente.getEstado() + "'"
+                + "}}";
+    }
 
 }
