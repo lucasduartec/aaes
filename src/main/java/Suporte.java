@@ -13,8 +13,7 @@ public class Suporte {
 
     public String receberRelatoCliente(Incidente incidente, String mensagem) {
 
-        return "O suporte agradece seu contato.\n" +
-                "A equipe técnica respondeu sua demanda conforme mensagem a seguir.\n" +
-                ">>" + EquipeDesenvolvimento.getInstancia().receberIncidente(incidente);
+        return "O suporte agradece seu contato. A equipe técnica respondeu sua demanda conforme mensagem a seguir.\n" +
+                ">> " + EquipeDesenvolvimento.getInstancia().receberIncidente(incidente);
     }
 }

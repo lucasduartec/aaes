@@ -3,7 +3,7 @@ package Equipe;
 import java.util.ArrayList;
 
 import Incidente.Incidente;
-import Incidente.Resolucao.EstrategiaResolucao;
+import Incidente.EstrategiaResolucao.EstrategiaResolucao;
 import Incidente.TiposIncidente.TipoIncidente;
 
 public abstract class Equipe {

@@ -2,7 +2,7 @@ package Equipe.TiposEquipe;
 
 import Equipe.Equipe;
 import Incidente.Incidente;
-import Incidente.Resolucao.ResolucaoProduto;
+import Incidente.EstrategiaResolucao.EstrategiaResolucaoProduto;
 import Incidente.TiposIncidente.TipoIncidenteProduto;
 
 public class EquipeDesenvolvimento extends Equipe {
@@ -12,7 +12,7 @@ public class EquipeDesenvolvimento extends Equipe {
     private EquipeDesenvolvimento() {
         listaIncidentes.add(TipoIncidenteProduto.getInstancia());
         setEquipeSuperior(EquipeInfraestrutura.getInstancia());
-        this.setEstrategiaResolucao(new ResolucaoProduto());
+        this.setEstrategiaResolucao(new EstrategiaResolucaoProduto());
     }
 
     public static EquipeDesenvolvimento getInstancia() {
@@ -21,6 +21,7 @@ public class EquipeDesenvolvimento extends Equipe {
 
     @Override
     public String receberIncidente(Incidente incidente) {
+        incidente.inciarAnalise();
         return analisarIncidente(incidente);
     }
 

@@ -1,4 +1,4 @@
-package Incidente.Resolucao;
+package Incidente.EstrategiaResolucao;
 
 import Incidente.Incidente;
 

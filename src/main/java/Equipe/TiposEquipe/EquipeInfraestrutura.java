@@ -1,7 +1,7 @@
 package Equipe.TiposEquipe;
 
 import Equipe.Equipe;
-import Incidente.Resolucao.ResolucaoInfraestrutura;
+import Incidente.EstrategiaResolucao.EstrategiaResolucaoInfraestrutura;
 import Incidente.TiposIncidente.TipoIncidenteInfraestrutura;
 
 public class EquipeInfraestrutura extends Equipe {
@@ -11,7 +11,7 @@ public class EquipeInfraestrutura extends Equipe {
     private EquipeInfraestrutura() {
         listaIncidentes.add(TipoIncidenteInfraestrutura.getInstancia());
         setEquipeSuperior(EquipeSeguranca.getInstancia());
-        this.setEstrategiaResolucao(new ResolucaoInfraestrutura());
+        this.setEstrategiaResolucao(new EstrategiaResolucaoInfraestrutura());
     }
 
     public static EquipeInfraestrutura getInstancia() {
