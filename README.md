@@ -7,7 +7,7 @@ O sistema gerencia o fluxo de incidentes reportados por clientes, encaminhando-o
 ## Padrões de projeto 
 | Padrão                      | Classes Envolvidas                          |
 |-----------------------------|---------------------------------------------|
-| **Singleton**               | Garante que exista apenas uma instância para cada equipe e para o suporte técnico. |
+| **Singleton**               | Garante que exista apenas uma instância para cada tipo e estado do incidente, para cada equipe e para o suporte técnico. |
 | **State**                   | Controla o ciclo de vida dos incidentes, permitindo transições entre estados como Reportado, Em Análise e Resolvido. |
 | **Observer**                | Notifica os clientes sobre mudanças no status de seus chamados.|
 | **Strategy**                | Permite que diferentes estratégias de resolução sejam aplicadas a cada tipo de incidente. |
