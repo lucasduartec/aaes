@@ -26,7 +26,7 @@ public class EquipeDesenvolvimento extends Equipe {
     }
 
     public String iniciarResolucaoIncidente() {
-        return "O incidente será tratado pela equipe de desenvolvimento.";
+        return "O incidente está sendo tratado pela equipe de desenvolvimento.";
     }
 
 }

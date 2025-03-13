@@ -31,7 +31,7 @@ public abstract class Equipe {
 
     public String analisarIncidente(Incidente incidente) {
         if (listaIncidentes.contains(incidente.getTipoIncidente())) {
-            return iniciarResolucaoIncidente() + estrategiaResolucao.resolver(incidente);
+            return iniciarResolucaoIncidente() + "\n" + estrategiaResolucao.resolver(incidente);
         } else {
             if (equipeSuperior != null) {
                 return equipeSuperior.analisarIncidente(incidente);

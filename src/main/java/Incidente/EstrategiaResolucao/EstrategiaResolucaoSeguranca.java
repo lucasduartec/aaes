@@ -6,6 +6,6 @@ public class EstrategiaResolucaoSeguranca implements EstrategiaResolucao {
     @Override
     public String resolver(Incidente incidente) {
         incidente.resolver();
-        return "Incidente de segurança tratado com prioridade.";
+        return "Descrição: Tratado com mitigação de ataque, reforço de firewall e auditoria de logs.";
     }
 }

@@ -21,6 +21,7 @@ public class Incidente extends Observable {
         this.tipoIncidente = tipoIncidente;
         this.descricao = descricao;
         this.codigo = codigo;
+        this.memento.add(this.estado);
     }
 
     public TipoIncidente getTipoIncidente() {
@@ -76,8 +77,11 @@ public class Incidente extends Observable {
     }
 
     public boolean resolver() {
-        setChanged();
-        notifyObservers();
-        return estado.resolver(this);
+        boolean resultado = estado.resolver(this);
+        if (resultado) {
+            setChanged();
+            notifyObservers();
+        }
+        return resultado;
     }
 }

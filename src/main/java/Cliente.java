@@ -1,7 +1,8 @@
-import Incidente.Incidente;
 
 import java.util.Observable;
 import java.util.Observer;
+
+import Incidente.Incidente;
 
 public class Cliente implements Observer {
 

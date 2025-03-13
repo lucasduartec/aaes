@@ -9,4 +9,8 @@ public class TipoIncidenteProduto implements TipoIncidente {
     public static TipoIncidenteProduto getInstancia() {
         return instancia;
     }
+
+    public String getTipo() {
+        return "Produto";
+    }
 }

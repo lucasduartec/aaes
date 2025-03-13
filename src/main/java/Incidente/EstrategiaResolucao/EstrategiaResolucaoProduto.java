@@ -6,6 +6,6 @@ public class EstrategiaResolucaoProduto implements EstrategiaResolucao {
     @Override
     public String resolver(Incidente incidente) {
         incidente.resolver();
-        return "Incidente resolvido com depuração de código e testes unitários.";
+        return "Descrição: Resolvido com depuração de código e testes unitários.";
     }
 }

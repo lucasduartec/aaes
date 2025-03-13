@@ -10,10 +10,14 @@ public class IncidenteVisitor implements Visitor {
 
     @Override
     public String exibirIncidente(Incidente incidente) {
-        return "{Incidente: {"
-                + "codigo: '" + incidente.getCodigo() + "'"
-                + ", estado: '" + incidente.getEstado() + "'"
-                + "}}";
+        return "{\n" +
+                "  \"Incidente\": {\n" +
+                "    \"codigo\": \"" + incidente.getCodigo() + "\",\n" +
+                "    \"descricao\": \"" + incidente.getDescricao() + "\",\n" +
+                "    \"tipo\": \"" + incidente.getTipoIncidente().getClass().getSimpleName() + "\",\n" +
+                "    \"estado\": \"" + incidente.getEstado().getEstado() + "\"\n" +
+                "  }\n" +
+                "}";
     }
 
 }

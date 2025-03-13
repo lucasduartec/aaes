@@ -18,6 +18,6 @@ public class EquipeSeguranca extends Equipe {
     }
 
     public String iniciarResolucaoIncidente() {
-        return "O incidente será tratado pela equipe de segurança.";
+        return "O incidente está sendo tratado pela equipe de segurança.";
     }
 }

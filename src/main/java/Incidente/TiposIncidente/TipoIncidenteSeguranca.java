@@ -9,4 +9,8 @@ public class TipoIncidenteSeguranca implements TipoIncidente {
     public static TipoIncidenteSeguranca getInstancia() {
         return instancia;
     }
+
+    public String getTipo() {
+        return "Segurança";
+    }
 }
