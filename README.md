@@ -17,3 +17,6 @@ O sistema gerencia o fluxo de incidentes reportados por clientes, encaminhando-o
 | **Chain of Responsibility** | Garante que cada equipe atue somente nos incidentes que correspondem à sua área de especialização, repassando para outra equipe se necessário. |
 | **Visitor**                 | Facilita a exibição das informações do incidente sem modificar sua estrutura interna, permitindo diferentes representações do mesmo objeto.    |
 | **Memento**                 | Mantém um histórico das mudanças de estado do incidente, permitindo a restauração para estados anteriores caso necessário.                     |
+
+## Diagrama de classes
+![Diagrama de classe](Diagrama-de-classes/Diagrama-de-classes.png)
